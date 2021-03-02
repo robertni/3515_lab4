@@ -104,7 +104,7 @@ public class ImageAdapter extends BaseAdapter implements SpinnerAdapter {
             textView = (TextView)linearLayout.getChildAt(1);
         }
 
-        // position will always include 0 - so look at one item prior
+        // position will always include 0 (title) - so look at one item prior
         imageView.setImageResource(images[position - 1]);
         textView.setText(items.get(position - 1));
 

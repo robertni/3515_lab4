@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class SelectionActivity extends AppCompatActivity {
 
     private final String title = "Item Selection";
+
     Spinner spinner;
     ImageView imageView;
     int[] dogImages;
@@ -59,6 +60,9 @@ public class SelectionActivity extends AppCompatActivity {
 
                     // start the activity
                     startActivity(intent);
+
+                    // reset the spinner to position 0
+                    spinner.setSelection(0);
                 }
             }
 

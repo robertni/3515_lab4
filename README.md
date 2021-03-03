@@ -8,10 +8,10 @@ original home page with the instructions selected.
 ![main](images/main.png)
 
 ## When you click the dropdown, this is what you get
-![dropdown](dropdown.png)
+![dropdown](images/dropdown.png)
 
 ## If you select an option, it will launch a new activity. That looks like this
-![clicked](clicked.png)
+![clicked](images/clicked.png)
 
 ## If we click the back button, we go back to the main page
-![return](return.png)
+![return](images/return.png)

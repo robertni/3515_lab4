@@ -6,17 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class SelectionActivity extends AppCompatActivity {
 
     private final String title = "Item Selection";
+    private final String instructions = "Please select a dog";
 
-    Spinner spinner;
-    ImageView imageView;
+    TextView instructionText;
+    GridView gridView;
     int[] dogImages;
 
     @Override
@@ -28,8 +31,11 @@ public class SelectionActivity extends AppCompatActivity {
         setTitle(title);
 
         // retrieve views from xml
-        spinner = findViewById(R.id.spinner);
-        imageView = findViewById(R.id.imageView);
+        instructionText = findViewById(R.id.instructionText);
+        gridView = findViewById(R.id.gridView);
+
+        // change instruction text
+        instructionText.setText(instructions);
 
         // create ArrayList of dogs
         ArrayList dogArray = new ArrayList<String>();
@@ -42,37 +48,9 @@ public class SelectionActivity extends AppCompatActivity {
 
         // create custom adapter
         ImageAdapter adapter = new ImageAdapter(this, dogArray, dogImages);
-        spinner.setAdapter(adapter); // attach custom adapter to spinner
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position > 0) {
-                    //showPicture(position - 1);
-
-                    // declare new intent
-                    Intent intent = new Intent(SelectionActivity.this, DisplayActivity.class);
-
-                    // pass data to intent
-                    intent.putExtra("dogArray", dogArray);
-                    intent.putExtra("dogImages", dogImages);
-                    intent.putExtra("position", position - 1);
-
-                    // start the activity
-                    startActivity(intent);
-
-                    // reset the spinner to position 0
-                    spinner.setSelection(0);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
     }
 
     private void showPicture(int position) {
-        imageView.setImageResource(dogImages[position]);
+        //imageView.setImageResource(dogImages[position]);
     }
 }

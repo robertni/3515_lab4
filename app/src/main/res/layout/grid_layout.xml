@@ -15,5 +15,7 @@
         android:id="@+id/gridText"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 </FrameLayout>

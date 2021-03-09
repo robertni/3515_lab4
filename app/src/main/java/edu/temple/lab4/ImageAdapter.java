@@ -55,6 +55,11 @@ public class ImageAdapter extends BaseAdapter {
 
             text.setText(items.get(position));
             image.setImageResource(images[position]);
+
+            text.setGravity(Gravity.CENTER);
+            text.setTextSize(22);
+
+            image.setPadding(2, 2, 2, 2);
         }
 
         return view;

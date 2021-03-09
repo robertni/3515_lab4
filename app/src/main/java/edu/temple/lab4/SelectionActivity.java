@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -48,9 +46,16 @@ public class SelectionActivity extends AppCompatActivity {
 
         // create custom adapter
         ImageAdapter adapter = new ImageAdapter(this, dogArray, dogImages);
-    }
+        gridView.setAdapter(adapter);
 
-    private void showPicture(int position) {
-        //imageView.setImageResource(dogImages[position]);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(SelectionActivity.this, DisplayActivity.class);
+                intent.putExtra("name", (String) dogArray.get(position));
+                intent.putExtra("image", dogImages[position]);
+                startActivity(intent);
+            }
+        });
     }
 }

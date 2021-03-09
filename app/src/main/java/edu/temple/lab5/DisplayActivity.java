@@ -1,7 +1,6 @@
-package edu.temple.lab4;
+package edu.temple.lab5;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;

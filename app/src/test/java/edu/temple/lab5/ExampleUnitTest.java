@@ -1,4 +1,4 @@
-package edu.temple.lab4;
+package edu.temple.lab5;
 
 import org.junit.Test;
 

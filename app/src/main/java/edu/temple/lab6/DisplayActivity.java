@@ -1,4 +1,4 @@
-package edu.temple.lab5;
+package edu.temple.lab6;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DisplayActivity extends AppCompatActivity {
-
-    private final String title = "Display";
 
     TextView text;
     ImageView image;
@@ -23,7 +21,7 @@ public class DisplayActivity extends AppCompatActivity {
         image = findViewById(R.id.displayImage);
 
         // set title of activity
-        setTitle(title);
+        setTitle(R.string.display_title);
 
         // get data from intent
         Intent intent = getIntent();

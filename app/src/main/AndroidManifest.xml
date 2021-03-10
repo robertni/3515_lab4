@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.temple.lab5">
+    package="edu.temple.lab6">
 
     <application
         android:allowBackup="true"
@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab4">
-        <activity android:name="edu.temple.lab5.SelectionActivity">
+        <activity android:name="edu.temple.lab6.SelectionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="edu.temple.lab5.DisplayActivity" />
+        <activity android:name="edu.temple.lab6.DisplayActivity" />
     </application>
 
 </manifest>

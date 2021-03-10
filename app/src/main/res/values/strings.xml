@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">lab4</string>
+    <string name="app_name">lab6</string>
+
+    <string name="select_title">Item Selection</string>
+    <string name="select_instruction">Click image to view</string>
+    <string name="happy_dog">Happy Dog</string>
+    <string name="masked_dog">Masked Dog</string>
+    <string name="many_dogs">Many Dogs</string>
+    <string name="doge">Doge</string>
+
+    <string name="display_title">Display</string>
+
 </resources>

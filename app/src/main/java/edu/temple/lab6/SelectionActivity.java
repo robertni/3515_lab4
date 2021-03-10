@@ -1,4 +1,4 @@
-package edu.temple.lab5;
+package edu.temple.lab6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,9 +13,6 @@ import java.util.ArrayList;
 
 public class SelectionActivity extends AppCompatActivity {
 
-    private final String title = "Item Selection";
-    private final String instructions = "Please select a dog";
-
     TextView instructionText;
     GridView gridView;
     int[] dogImages;
@@ -26,21 +23,18 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // set title of the activity
-        setTitle(title);
+        setTitle(R.string.select_title);
 
         // retrieve views from xml
         instructionText = findViewById(R.id.instructionText);
         gridView = findViewById(R.id.gridView);
 
-        // change instruction text
-        instructionText.setText(instructions);
-
         // create ArrayList of dogs
         ArrayList dogArray = new ArrayList<String>();
-        dogArray.add("Happy Dog");
-        dogArray.add("Masked Dog");
-        dogArray.add("Many Dogs");
-        dogArray.add("Doge");
+        dogArray.add(getString(R.string.happy_dog));
+        dogArray.add(getString(R.string.masked_dog));
+        dogArray.add(getString(R.string.many_dogs));
+        dogArray.add(getString(R.string.doge));
 
         dogImages = new int[]{R.drawable.dog1, R.drawable.dog2, R.drawable.dog3, R.drawable.dog4};
 

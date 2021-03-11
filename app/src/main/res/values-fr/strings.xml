@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">lab6</string>
+
+    <string name="select_title">Sélection d\'article</string>
+    <string name="select_instruction">Cliquez sur une image pour voir</string>
+    <string name="happy_dog">Chien heureux</string>
+    <string name="masked_dog">Chien masqué</string>
+    <string name="many_dogs">Beaucoup de chiens</string>
+    <string name="doge">Doge</string>
+
+    <string name="display_title">Display</string>
+</resources>
